@@ -20,8 +20,14 @@ export default class CapstoneContainer extends Component {
 
     }
 
-    handleSuccessfulFormSubmission(){
+    handleSuccessfulFormSubmission(classItem){
         console.log("handle submission")
+        this.setState ( {
+            class_id: "",
+            class_name: "",
+            class_description: ""
+        })
+        window.location.reload(true)
     }
 
     handleFormSubmissionError(){
@@ -44,7 +50,8 @@ export default class CapstoneContainer extends Component {
             }
         ).then(response => {
             console.log("Response",response)
-            this.props.handleSuccessfulFormSubmission(response.data)
+           
+            this.handleSuccessfulFormSubmission(response.data.classItem)
         }).catch(error => {
             console.log("error", error)
         })
@@ -57,13 +64,13 @@ export default class CapstoneContainer extends Component {
             <div className='right-home-content-wrapper'>
                 <div className='right-blog-container' id="what-is-a-trademark">
                     <div className='right-blog-title'>
-                        <h1>Capstone container</h1>
+                        <h1>Trademark Id's</h1>
                     </div>
 
                     <div className='right-blog-subtitle'>
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} className = "submit-form">
                             <div>
-                                <input
+                                <input className = "input-id"
                                     type="text"
                                     name="class_id"
                                     placeholder="number"
@@ -72,7 +79,7 @@ export default class CapstoneContainer extends Component {
                                 />
                             </div>
                             <div>
-                                <input
+                                <input className="input-name"
                                     type="text"
                                     name="class_name"
                                     placeholder="name"
@@ -81,7 +88,7 @@ export default class CapstoneContainer extends Component {
                                 />
                             </div>
                             <div>
-                                <textarea
+                                <textarea className="input-description"
                                     type="text"
                                     name="class_description"
                                     placeholder="description"
@@ -89,7 +96,7 @@ export default class CapstoneContainer extends Component {
                                     onChange={this.handleChange}
                                 />
                             </div>
-                            <button type="submit">Save</button>
+                            <button className="input-button" type="submit">Save</button>
                         </form>
                     </div>
 

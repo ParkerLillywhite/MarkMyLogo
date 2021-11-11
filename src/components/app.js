@@ -10,9 +10,7 @@ import Icons from './helpers/icons';
 import Navigation from './Navigation';
 import useSticky from './hooks/useSticky';
 import NavBar from './navbar-container';
-import HowToTrademark from './content/how-to-trademark';
-import TrademarkAdvantages from './content/trademark-advantages';
-import WhatIsATrademark from './content/what-is-a-trademark';
+
 
 export default class App extends Component {
 
@@ -28,12 +26,7 @@ export default class App extends Component {
   render() {
     
     return (
-      
-      
        <NavBar />
-        
-        
-     
     );
   }
 }
