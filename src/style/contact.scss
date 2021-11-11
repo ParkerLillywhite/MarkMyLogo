@@ -1,0 +1,62 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(238, 250, 255);
+    font-family: 'Crimson';
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+    
+    
+
+    .contact-outwatch{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        margin: 50px 0px 0px 0px;
+        padding: 100px 20px 100px 20px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        
+        
+        .contact-outwatch-title{
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            
+        }
+
+        .contact-outwatch-subtitle{
+            padding: 10px 0 10px 0;
+        }
+
+        .btn-learn-more{
+            @include base-btn;
+            margin-top: 20px;
+            height:70px;
+            width: 275px;
+            font-size: 1.1em;
+            font-family: 'Crimson';
+        }
+    }
+
+    .contact-kimball{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        
+        padding: 0px 30px 100px 29px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+
+        .btn-kimball{
+            @include base-btn;
+            margin-top: 20px;
+            height:70px;
+            width: 275px;
+            font-size: 1.1em;
+            font-family: 'Crimson';
+        }
+    }
+}

@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0px;
+}
+
+
+@import './mixins.scss';
+@import './colors.scss';
+@import '/navbar.scss';
+@import '/home.scss';
+@import '/contact.scss';
+@import '/blog-normal.scss';
+@import '/blog-right.scss';
+@import '/capstone-list.scss';
